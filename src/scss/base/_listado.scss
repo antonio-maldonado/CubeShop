@@ -1,0 +1,164 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.listado{
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.search{
+    display: flex;
+    margin: 0 auto;
+    width: 100rem;
+    justify-content: flex-end;
+ 
+    label{
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+    select{
+        margin-right: 2rem ;
+        width: 10rem;
+        border: none;
+    }
+    input{
+        padding: 1rem;
+        border: none;
+        border-radius: 0.7rem;
+        width: 20rem;
+    }
+    p#par{
+        display: inline-block !important;
+        width: 100% !important;
+        // height: 100rem !important;
+    }
+}  
+
+.listado__box{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+    gap: 2rem;
+    color: black;
+    width: 100rem;
+
+    .listado__item{
+        background-color: #f2f2f2;
+        color: black;
+        width: 100%;
+    }
+
+    h1,h2{
+        color: black;
+    }
+
+    .precio span::before{
+        content: "$";
+    }
+
+    .precio{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: v.$verde;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    span.titulo{
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .listado__img{
+        
+        img{
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        
+    }
+}
+
+@include m.desktop(){
+    .listado__box{
+        width: 90%;
+    }
+
+    span.titulo{
+        font-size: 1.5rem !important;
+    }
+
+    .search{
+        width: 90% !important;
+        
+    }
+    
+    .precio{
+        span{
+
+            font-size: 1.5rem !important;
+        }
+    }
+
+    .paginas{
+        width: 90% !important;
+    }
+  
+}
+
+@include m.tablet(){
+    .listado__box{
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+    }
+    .search{
+        label{
+
+            display: flex;
+            align-items: center;
+            margin: 0;
+            
+        }
+        select{
+            margin-right: 1rem;
+            width: 100%;
+        }
+        input{
+            width: 100%;
+        }
+        
+      
+        display: grid;
+        grid-template-columns: 12.5% 32.5% 7.5% 37.5%;
+        grid-template-rows: 0.5fr 0.8fr;
+        column-gap: 3.5%;
+        row-gap: 2rem;
+    }
+}
+
+.paginas{
+    width: 100rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+
+    a{
+        background-color: v.$azul;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        border-radius: 1rem;
+
+        &.select{
+            background-color: v.$amarillo;
+        }
+    }
+}

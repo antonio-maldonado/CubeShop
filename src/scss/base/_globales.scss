@@ -1,0 +1,101 @@
+@use 'variables' as v;
+@use 'base/mixins' as m;
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    height: auto;
+    min-height: 100vh;
+}
+
+p {
+    color: v.$negro;
+    font-size: 2rem;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: v.$fuente_principal;
+    margin: calc(v.$separacion / 2) 0;
+    font-weight: 300;
+    text-align: center;
+    color:v.$blanco;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+textarea{
+    resize: none;
+}
+
+body{
+    margin: 0;
+   
+    background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%);
+    background-repeat: no-repeat;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li{
+    color: v.$blanco;
+    list-style: none;
+    }
+}
+
+a{
+    color: v.$blanco;
+}
+
+img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .slider{
+    
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      
+  }
+

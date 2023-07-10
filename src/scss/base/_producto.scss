@@ -1,0 +1,113 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.producto{
+    margin: 10rem auto;
+    width: 80%;
+    background-color: #f2f2f2;
+    h1,h2,p{
+        color: black;
+    }
+}
+
+.producto__body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .producto__img{
+        margin: 0 auto;
+        margin-top: 5rem;
+        width: 80%;
+    }
+
+    p{
+        font-size: 3rem;
+    }
+
+    .precio::before{
+        content: "$";
+    }
+}
+
+.producto__info{
+    margin: 0 auto;
+    width: 80%;
+    h1{
+        font-weight: 700;
+    }
+}
+
+.boton_compra{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    color: v.$blanco;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    svg{
+        margin-right: 1rem;
+        filter: invert(1);
+    }
+}
+
+.azul{
+    background: v.$azul;
+}
+
+.verde{
+    background-color: v.$verde;
+}
+
+.detalles{
+    width: 50%;
+    display: grid;
+    margin-left: 5%;
+    grid-template-columns: 0.5fr 1.5fr;
+    p{
+        span{
+            font-weight: 700;
+        }
+    }
+}
+
+.descripcion{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    img{
+        // display: block;
+        // margin: auto auto;
+
+        max-width: 90%;
+        max-height: 90%;
+        // display: flex;
+        // align-items: center;
+    }
+}
+
+@include m.desktop(){
+    .producto{
+        width: 95% ;  
+    }
+    .producto__body{
+        width: 100% ;   
+        grid-template-columns:1fr;
+    }
+    .producto__img{
+        // margin: 0 !important;
+        width: 100%;
+    }
+}

@@ -1,0 +1,104 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.table-container{
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+
+
+.table-productos{
+    width: 100%;
+    border-spacing: 0;
+    
+    thead{
+        font-size: 2rem;
+        font-weight: 700;
+        background-color: v.$verde;
+        color: v.$blanco;
+    }
+
+    tbody{
+        color: v.$blanco;
+    }
+
+    td{
+        
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        border-bottom: .5rem solid v.$grisOscuro;
+    }
+
+  
+
+    td:first-of-type{
+        width: 5%;
+    }
+    td:nth-child(2){
+        width: 30%;
+    }
+
+    td:nth-child(3){
+        width: 25%;
+        
+        img{
+            max-width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    td:nth-child(4){
+        width: 10%;
+    }
+
+    // td:nth-child(5){
+        
+    // }
+}
+
+.botones-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.table{
+    width: 100rem;
+    
+    .boton-verde{
+        margin-bottom: 2rem;
+    }
+}
+
+.alerta{
+    width: 100%;
+    text-align: center;
+    color: v.$blanco;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &.exito{
+        background-color: v.$verde;
+    }
+    
+    &.error{
+        background-color: v.$rojo;
+    }
+}
+
+@include m.desktop(){
+    .table{
+        width: 90%;
+    }
+
+    td{
+        font-size: 1.5rem !important;
+    }
+}

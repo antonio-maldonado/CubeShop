@@ -1,0 +1,72 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.login{
+    h1{
+        margin-top: 10rem;
+        font-weight: 700;
+    }
+    width: 60rem;
+    margin: 0 auto;
+    
+}
+
+.login__formulario{
+    background-color: v.$blanco;
+    width: 100%;
+    padding: 5rem;
+    border-radius: 2rem;
+
+    p{
+        font-size: 1.5rem;
+        text-align: center;
+        a{
+            color: v.$azul;
+            font-weight: 700;
+        }
+    }
+
+    .boton-container{
+        margin-top: 2rem;
+    }
+
+    .login__campo{
+        margin-bottom: 3rem;
+        
+        label{
+            width: 25%;
+            display: inline-block;
+        }
+
+        input{
+            width: 74%;
+            border: none;
+            border-radius: 1rem;
+            padding: 1rem;
+            background-color: #d0e5ff;
+        }
+    }
+}
+
+@include m.desktop(){
+    .login{
+        width: 60%;
+    }
+    
+}
+
+@include m.tablet(){
+    .login{
+        width: 90%;
+    }
+
+    .login__formulario{
+        padding: 5rem 2rem;
+        input{
+            width: 59%;
+        }
+
+        label{
+            width: 40%;
+        }
+    }
+}

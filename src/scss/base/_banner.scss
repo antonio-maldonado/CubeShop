@@ -1,0 +1,128 @@
+// .item-slider{
+//     border: .1rem solid black;
+//     position: relative;
+//     height: 100%;
+    
+// }
+
+// .tarjetaSlider{
+//     height: 100%;
+// }
+
+// .flechas{
+//     height: 100%;
+//     position: absolute;
+//     top: 5rem;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 2rem;
+// }
+
+// .slider{
+    
+//     height: 72rem;
+//     min-height: 72rem;
+//     overflow: hidden;
+
+//     img{
+//         height: 100%;
+//         max-width: 100%;
+//         background-size: cover;
+//     }
+   
+    
+// }
+
+// .flechas{
+//     svg{
+//         height: 5rem;
+//         width: 5rem;
+//         border-radius: 2.5rem;
+//         background-color: white;
+//     }
+// }
+
+svg{
+    &:hover{
+        cursor: pointer;
+        
+    }
+}
+
+.container2{
+    width: 100%;
+    min-height: 20vh;
+    
+    overflow: hidden;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+    
+}
+
+.slider__container{
+    display: grid;
+    align-items: center;
+    gap: 1em;
+    
+}
+
+.slider__body{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    width: 100%;
+
+    .slider__picture{
+        opacity: 0;
+        transition: opacity 3s;
+    }
+}
+
+.slider__body--show{
+    .slider__picture{
+        opacity: 1;
+        transition: opacity 3s;
+    }
+}
+
+.div-flecha{
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+    svg{
+        background-color: #f2f2f2;
+        border-radius: 3rem;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &.left{
+        left: 0;
+        
+    }
+
+    &.der{
+        right: 0;
+        
+    }
+}
+
+.slider__img{
+    pointer-events: none;
+    width: 100%;
+    
+}   
+
+figure{
+    margin: 0;
+}
+
